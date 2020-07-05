@@ -1,0 +1,8 @@
+@import './sass/variables';
+
+.app {
+    background-color: $primary_bg;
+    color: $gray;
+    padding: 3rem 2rem;
+    min-height: 100vh;
+}

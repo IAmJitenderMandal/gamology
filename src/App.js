@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useContext, useState, useReducer } from "react";
+import axios from "axios";
+import Search from "./components/search/Search.component";
+import "./app.styles.scss";
 
-function App() {
+// context with reducer and actions
+import dataContext from "./context/dataContext";
+import reducer from "./context/reducer";
+import { ADD_DATA } from "./context/action.types";
+import LoadMore from "./components/loadMoreBtn/LoadMore.component";
+
+export default function App() {
+  let [gamesData, dispatch] = useReducer(reducer, { data: [] });
+  let [url, setUrl] = useState(
+    "https://api.rawg.io/api/games?genres=action,shooter"
+  );
+
+  useEffect(() => {
+    axios.get(url).then((response) => {
+      dispatch({
+        type: ADD_DATA,
+        payload: response.data,
+      });
+    });
+  }, [url]);
+  console.log(gamesData.data);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <dataContext.Provider
+      value={{ data: { gamesData, setUrlFunc: setUrl }, dispatch }}
+    >
+      <div className="app">
+        <Search />
+        <LoadMore />
+      </div>
+    </dataContext.Provider>
   );
 }
-
-export default App;

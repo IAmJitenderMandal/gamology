@@ -1,0 +1,32 @@
+@import '../../sass/variables';
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .searchInput {
+        background-color: $secondory_bg;
+        border: none;
+        border-radius: 5px;
+        width: 40vw;
+        height: 2.3rem;
+        color: $white;
+        padding-left: 2.8rem;
+        letter-spacing: 2px;
+        font-size: 1.1rem;
+        font-weight: 100;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+}
+
+    .searchIcon {
+        color: $blue_green;
+        position: absolute;
+        left: 30.2%;
+        cursor: pointer;
+    }
+}

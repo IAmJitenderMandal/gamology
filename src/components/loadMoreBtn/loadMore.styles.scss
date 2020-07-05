@@ -1,0 +1,18 @@
+@import '../../sass/variables';
+
+.load-more-btn {
+    padding: .7rem 1.7rem;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    color: $white;
+    background-color: $primary_bg;
+    border: 1px solid $gray;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 0.5s background-color;
+
+    &:hover {
+        background-color: $secondory_bg;
+    }
+}
