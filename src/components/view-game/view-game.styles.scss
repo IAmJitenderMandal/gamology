@@ -1,0 +1,61 @@
+@import "../../sass/variables";
+
+.view_Game {
+  padding: 0 2rem;
+  min-height: 100vh;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  .main-info {
+    padding-top: 8rem;
+  }
+
+  .title,
+  .realese-info-etc {
+    color: $white;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .realese-info-etc {
+    .bold-title {
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 1.1rem;
+    }
+
+    .year-value,
+    .playtime-value,
+    .platforms-value {
+      font-weight: 300;
+    }
+  }
+
+  .summery {
+    margin-top: 4rem;
+    display: flex;
+
+    .img-and-text {
+      display: flex;
+
+      .text {
+        margin-top: 0;
+        margin-left: 1.5rem;
+        letter-spacing: 1px;
+        color: $white;
+      }
+    }
+  }
+
+  .rating-map {
+    padding-top: 4rem;
+    h3 {
+      text-align: center;
+      color: $white;
+    }
+  }
+}

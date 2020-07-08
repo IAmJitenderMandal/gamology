@@ -7,7 +7,7 @@
   padding: 1rem;
   border-radius: 5px;
   margin-bottom: 3rem;
-  
+
   .img {
     height: 200px;
     background-image: url("https://media.rawg.io/media/crop/600/400/games/f24/f2493ea338fe7bd3c7d73750a85a0959.jpeg");
@@ -18,19 +18,25 @@
 
   .title {
     margin: 0.8rem 0rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
     color: $blue_green;
   }
 
-  .creator {
+  .ratings {
     margin: 0.8rem 0rem;
     letter-spacing: 1px;
     font-weight: 400;
     color: white;
+    font-size: 1.2rem;
   }
-  .ratings {
+  .release-date {
     color: $white;
     letter-spacing: 1px;
+    font-size: 0.9rem;
+  }
+
+  .view-game-link {
+    text-decoration: none;
   }
 }

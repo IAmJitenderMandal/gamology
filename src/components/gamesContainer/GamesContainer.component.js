@@ -5,11 +5,14 @@ import "./gameContainer.styles.scss";
 
 export default function GamesContainer() {
   const { data, dispatch } = useContext(dataContext);
-  console.log(data);
   
   return (
     <div className="gamesContainer">
-      
+      {
+        data.gamesData.data.map((game, index) => {
+          return <Card  game={game} key={index} />
+        })
+      }
     </div>
   );
 }
